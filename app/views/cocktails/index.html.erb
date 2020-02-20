@@ -1,10 +1,59 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
+<div class="bg-info navbar-dark text-white">
+    <div class="container">
+      <nav class="navbar px-0 navbar-expand-lg navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a href="index.html" class="pl-md-0 p-3 text-white">View our cocktails</a>
+            <a href="app.html" class="p-3 text-decoration-none text-white">App example</a>
+            <a href="form.html" class="p-3 text-decoration-none text-white">Create a cocktail</a>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+
+
+
+
+
+
+<div class="jumbotron bg-secondary text-center text-info mb-0 radius-0">
   <div class="container">
-    <h1>Tokyo cocktails.</h1></br>
-    <h3>The best cocktails in Meguro</h3></br>
+    <div class="ht-tm-header">
+      <h1 class="display-1 display-xxl text-uppercase">Tokyo Cocktails</h1>
+      <span class="lead">Affordable cocktails, convenient location</span>
+
+      <div class="mt-4">
+        <a href="#!"
+           class="btn btn-info btn-lg m-2 text-secondary">
+          <span>A Button</span>
+        </a>
+
+        <a href="#!"
+           target="_blank"
+           class="btn btn-info text-secondary btn-lg m-2">
+          <span>Another Button</span>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
-<div class="container mt-4">
-  <!-- list of cocktails -->
-  <h2 id="cocktail-list">Your cocktail of choice?</h2>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="ht-tm-element card">
+        <%= image_tag "https://www.tullamoredew.com/assets/uploads/cocktails/SetWidth500-Tully-and-Tonic-Bottle.jpg", alt: "alttext", width: "300px", class: "card-img-top" %>
+        <div class="card-body">
+          <h4 class="card-title"><%= cocktail.name %></h4>
+          <p class="card-text"></p>
+          <%= link_to "Read more", cocktail_path(cocktail), class: "btn btn-light"  %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
+
