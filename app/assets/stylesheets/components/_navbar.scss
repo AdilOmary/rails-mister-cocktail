@@ -1,6 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-color: transparent;
+  transition: 0.2s background-color ease;
+}
+
+.navbar-lewagon-color {
+  background: rgba(34, 168, 170, 0.85);
+  border-bottom: 1px solid rgba(55,55,55, 0.5);
+  box-shadow: 1px 1px 4px rgba(0,0,0, 0.3);
+}
+
+.navbar-brand{
+  // background: rgba(245,245,245, 0.8);
+  // border-radius: $spacer;
+  // border: 1px solid rgba(55,55,55, 0.5);
+  p {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 28px;
+    margin: 0;
+    padding: 0 8px;
+    color: white;
+    transition: 0.5s;
+  }
+  & p:hover{
+    text-shadow: 2px 1px 0px rgba(0,0,0,0.91);
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +35,17 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.nav-link {
+  font-size: 24px;
+  transition: 0.5s;
+  border-radius: $spacer;
+  i{
+    color: white;
+  }
+
+  &:hover {
+    text-shadow: 2px 1px 0px rgba(0,0,0, 0.91);
+  }
 }
