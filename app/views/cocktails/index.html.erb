@@ -1,12 +1,8 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.imgur.com/xEdOXwn.jpg);">
-  <div class="container">
-    <h1>It's time for a cocktail</h1>
-  </div>
-</div>
-  <%= link_to "Create a cocktail", new_cocktail_path  %>
+<%= render "shared/navbar" %>
+<%= render "banner" %>
 <div class="cards">
     <% @cocktails.each do |cocktail| %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/200/300)">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.imgur.com/BqNScnf.jpg)">
     <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
       <%= cocktail.name %>
   </div>
