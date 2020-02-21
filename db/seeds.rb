@@ -42,6 +42,6 @@ Cocktail.create(name: 'Osaka Orange-y')
 
 Cocktail.all.each do |cocktail|
   2.times do
-    Dose.create(ingredient: Ingredient.all.sample, cocktail: cocktail, description: "#{(1..10).to_a.sample}/#{(1..10).to_a.sample} ounce(s)")
+    Dose.create(ingredient: Ingredient.all.sample, cocktail: cocktail, description: "#{(1..5).to_a.sample} shots")
   end
 end
