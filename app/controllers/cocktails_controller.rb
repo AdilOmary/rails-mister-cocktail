@@ -9,6 +9,7 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
+    @path = ''
   end
 
   def create

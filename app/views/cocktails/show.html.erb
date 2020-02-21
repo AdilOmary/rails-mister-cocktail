@@ -1,8 +1,22 @@
 <div class="container">
   <div class="cocktail-container">
     <div class="cocktail-image"></div>
-    <div class="cocktail-info">
-      <h2><%= @cocktail.name %></h2>
+
+      <% if @cocktail.photo.attached? %>
+
+        <div class="cocktail-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+          <%= @cocktail.name %>
+        </div>
+
+        <% else %>
+
+        <div class="cocktail-info">
+          <%= @cocktail.name %>
+        </div>
+
+      <% end %>
+
+
       <ul class="cocktail-ingredients">
         <% @cocktail.doses.each do |dose| %>
         <div class="cocktail-ingredient">
@@ -18,6 +32,5 @@
           <% end %>
           <%= link_to "Come back", cocktails_path %>
       </ul>
-    </div>
   </div>
 </div>
